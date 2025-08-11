@@ -1,46 +1,90 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/RyEig_hB)
-# 🎨 Assignment: CSS Basics & The Box Model
+Html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Circles</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-## Overview
+<div class="circle-container">
+    <div class="circle red">
+        <div>
+            <h3>Energy</h3>
+            <p>Represents passion, excitement, and action.</p>
+        </div>
+    </div>
+    <div class="circle blue">
+        <div>
+            <h3>Calm</h3>
+            <p>Symbolizes peace, trust, and relaxation.</p>
+        </div>
+    </div>
+    <div class="circle green">
+        <div>
+            <h3>Growth</h3>
+            <p>Associated with nature, renewal, and balance.</p>
+        </div>
+    </div>
+</div>
 
-This assignment introduces you to the foundational principles of CSS—how to style web content, apply essential styling properties, and understand the powerful concept of the CSS Box Model. You’ll practice writing clean, organized CSS that brings structure and visual appeal to an HTML page.
+</body>
+</html>
+Css
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+}
 
-## Objective
+.circle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    min-height: 100vh;
+    flex-wrap: wrap;
+}
 
-Your goal is to create a visually styled web page using only CSS. You will apply basic styling rules to text, backgrounds, and layout elements, and demonstrate an understanding of how the CSS Box Model affects spacing and sizing on the page.
+.circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    padding: 20px;
+    border: 5px solid white;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
 
-## What You'll Practice
+.circle:hover {
+    transform: scale(1.1);
+}
 
-* Connecting CSS to your HTML (external stylesheet)
-* Using basic CSS properties such as `color`, `font-size`, `margin`, `padding`, `border`, and `background`
-* Structuring your layout with awareness of how the Box Model influences spacing and dimensions
-* Writing clean and maintainable CSS selectors and rules
+.circle h3 {
+    margin: 0 0 8px;
+    font-size: 1.1em;
+}
 
-## Instructions
+.circle p {
+    margin: 0;
+    font-size: 0.85em;
+}
 
-Start with a basic HTML structure and create a separate CSS file named `styles.css`. Link it to your HTML file. Apply various styles to headings, paragraphs, and container sections.
+.red {
+    background-color: #e63946;
+}
 
-Use the Box Model deliberately—experiment with margin, padding, and borders to see how they affect the layout. Apply background colors to visualize box boundaries. You may also style buttons, navigation, and card-like sections to demonstrate your grasp of spacing and alignment.
+.blue {
+    background-color: #457b9d;
+}
 
-No JavaScript or external CSS libraries (like Bootstrap) should be used.
-
-## Deliverables
-
-Submit the following files:
-
-* `index.html`: A basic HTML page with structured content.
-* `styles.css`: Your external stylesheet containing all your CSS rules.
-
-Both files should work together to showcase:
-
-* Proper use of selectors and basic styling properties
-* Clear implementation of the CSS Box Model
-* Consistent spacing, sizing, and layout styling
-
-## Tips
-
-* Correct linkage of HTML and CSS files
-* Use of appropriate CSS selectors and properties
-* Demonstration of the Box Model through visual layout (clear use of margin, padding, and borders)
-* Readability and organization of CSS code (indentation, comments, spacing)
-* Overall appearance and clarity of styled content
+.green {
+    background-color: #2a9d8f;
+}
